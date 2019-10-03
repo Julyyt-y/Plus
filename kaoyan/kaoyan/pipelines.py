@@ -7,7 +7,7 @@
 import pymysql
 from kaoyan import settings
 from logging import log
-
+from kaoyan.items import KaoyanItem,otherItem
 class KaoyanPipeline(object):
     def process_item(self, item, spider):
         return item
@@ -28,21 +28,29 @@ class DBPipeline(object):
 
     def process_item(self, item, spider):
         try:
-
             # 插入数据
-            self.cursor.execute(
-                """insert into links(name,link,jianjie)
-                value (%s, %s,%s)""",
-                (item['name'],
-                 item['link'],
-                 item['jianjie']
-                 ))
-
-            # 提交sql语句
+            if type(item) == KaoyanItem:
+                self.cursor.execute(
+                    """insert into links(name,link,jianjie)
+                    value (%s, %s,%s)""",
+                    (item['name'],
+                     item['link'],
+                     item['jianjie']
+                     ))
+            elif type(item) == otherItem:
+                self.cursor.execute(
+                    """insert into other(id,word,title,content,time)
+                    value (%s,%s,%s,%s,%s)""",
+                    (item['id'],
+                     item['word'],
+                     item['title'],
+                     item['content'],
+                     item['time']
+                     ))
+                # 提交sql语句
             self.connect.commit()
-
         except Exception as error:
-            # 出现错误时打印错误日志
+        # 出现错误时打印错误日志
             log(error)
         return item
 

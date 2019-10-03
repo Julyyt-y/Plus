@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from kaoyan.items import KaoyanItem,otherItem
+from kaoyan.items import KaoyanItem, otherItem
 
 
 class HomeSpider(scrapy.Spider):
@@ -23,42 +23,54 @@ class HomeSpider(scrapy.Spider):
                 id = id + 1
                 item = KaoyanItem()
                 item['name'] = part.xpath('.//text()').extract()
-                urls = item['link'] = part.xpath('.//@href').extract()
-                for url in urls:
-                    for word in self.words:
-                        if word == 'jianjie' :
-                            request=scrapy.Request(url + word + '/', callback=self.jianjie)
-                            request.meta['item'] = item
+                url = item['link'] = part.xpath('.//@href').extract()[0]
+                for word in self.words:
+                    if word == 'jianjie':
+                        request=scrapy.Request(url + word + '/', callback=self.jianjie)
+                        request.meta['item'] = item
+                        request.meta['id']=id
+                        request.meta['handle_httpstatus_list']= range(300,600)
+                        yield request
+                    else:
+                        for index in self.indexs:
+                            request=scrapy.Request(url + word + '/'+index, callback=self.othernews)
+                            request.meta['id']=id
+                            request.meta['word']=word
                             yield request
-                        else:
-                            for index in self.indexs:
-                                request=scrapy.Request(url + word + '/'+index, callback=self.othernews)
-                                request.meta['id']=id
-                                request.meta['word']=word
-                                yield request
 
 
-
-    #简介
+# 简介
     def jianjie(self, response):
-        item=response.meta['item']
-        str=''.join(response.xpath('//div[@class="articleCon"]/p//text()').extract())
-        item['jianjie']=str.strip()
+        print(response.meta['id'])
+        item = response.meta['item']
+        if response.status==range(300,600):
+            item['jianjie']=''
+            print('cuouwu:'+str(404)+'\n')
+        else:
+            str = ''.join(response.xpath('//div[@class="articleCon"]/p//text()').extract())
+            item['jianjie'] = str.strip()
         yield item
 
-    #其他信息
+
+# 其他信息
     def othernews(self, response):
-        item = otherItem()
-        item['id'] = response.meta['id']
-        item['word'] = response.meta['word']
         allnew = response.xpath('//ul[@class="subList"]/li')
-        item['title'] = allnew.xpath('.//a/text()').extract()
-        item['time'] = allnew.xpath('.//span/text()').extract()
+        title = allnew.xpath('.//a/text()').extract()
+        time = allnew.xpath('.//span/text()').extract()
+        content = allnew.xpath('.//a/@href').extract()
+        for m in zip(title,time,content):
+            item = otherItem()
+            item['id'] = response.meta['id']
+            item['word'] = response.meta['word']
+            item['title'] =m[0]
+            item['time'] = m[1]
+            item['content']=m[2]
         url = allnew.xpath('.//a/@href').extract()[0]
-        print(url)
         request = scrapy.Request(url, callback=self.downlond)
         request.meta['item'] = item
         yield request
+        yield item
 
-    def downlond(self,response):
+
+    def downlond(self, response):
         pass
