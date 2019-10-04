@@ -55,6 +55,7 @@ attr alphabeticModifiers
 attr arrowHeadLength
 attr arrowShaftLength
 attr autoCompleteTextViewStyle
+attr autoScrollMode
 attr autoSizeMaxTextSize
 attr autoSizeMinTextSize
 attr autoSizePresetSizes
@@ -113,6 +114,7 @@ attr contentInsetStartWithNavigation
 attr controlBackground
 attr coordinatorLayoutStyle
 attr customNavigationLayout
+attr darkColor
 attr defaultQueryHint
 attr dialogCornerRadius
 attr dialogPreferredPadding
@@ -218,6 +220,7 @@ attr layout_goneMarginTop
 attr layout_insetEdge
 attr layout_keyline
 attr layout_optimizationLevel
+attr lightColor
 attr lineHeight
 attr listChoiceBackgroundIndicator
 attr listDividerAlertDialog
@@ -256,9 +259,11 @@ attr progressBarStyle
 attr queryBackground
 attr queryHint
 attr radioButtonStyle
+attr radiusPercent
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr scrollSpeed
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -394,6 +399,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color lineColor
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -408,6 +414,7 @@ color material_grey_850
 color material_grey_900
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -422,12 +429,19 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color selector_tab_text
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color tagDark
+color tagLight
+color tag_background
+color textcolor_tags
+color themeColor
+color themeTextColor
 color tooltip_background_dark
 color tooltip_background_light
 dimen abc_action_bar_content_inset_material
@@ -505,6 +519,8 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen compat_button_inset_horizontal_material
 dimen compat_button_inset_vertical_material
 dimen compat_button_padding_horizontal_material
@@ -536,6 +552,11 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
+dimen themeTextSize
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -628,8 +649,17 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable ic_home
+drawable ic_home_click
+drawable ic_i
+drawable ic_i_click
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_message
+drawable ic_message_click
+drawable ic_school
+drawable ic_school_click
+drawable ic_vector_drawable_iconfont_point
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -642,6 +672,10 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable selector_tab_home
+drawable selector_tab_me
+drawable selector_tab_message
+drawable selsctor_tab_school
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -650,6 +684,7 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id action0
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -669,16 +704,20 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id activity_main
 id add
 id alertTitle
 id all
 id always
+id android_eye
 id async
 id barrier
 id beginning
 id blocking
 id bottom
+id bottom_tab_indicator
 id buttonPanel
+id cancel_action
 id center
 id center_horizontal
 id center_vertical
@@ -692,19 +731,24 @@ id content
 id contentPanel
 id custom
 id customPanel
+id decelerate
 id decor_content_parent
 id default_activity_button
 id dimensions
 id direct
+id disable
 id disableHome
 id edit_query
 id end
+id end_padder
 id expand_activities_button
 id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
+id fl_content
 id forever
+id fragment_tagcloud
 id gone
 id group_divider
 id groups
@@ -717,11 +761,13 @@ id image
 id info
 id invisible
 id italic
+id iv
 id left
 id line1
 id line3
 id listMode
 id list_item
+id media_actions
 id message
 id middle
 id multiply
@@ -769,9 +815,12 @@ id src_in
 id src_over
 id standard
 id start
+id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id tabHost
 id tabMode
+id tag_cloud
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -788,6 +837,7 @@ id topPanel
 id uniform
 id up
 id useLogo
+id vector_img
 id withText
 id wrap
 id wrap_content
@@ -825,16 +875,35 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout bottom_layout
+layout bottom_tab
+layout fragment_blank
+layout fragment_tab_home
+layout fragment_tab_me
+layout fragment_tab_message
+layout fragment_tab_school
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout tag_cloud
+layout tag_item_vector
+layout tag_item_view
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
@@ -877,6 +946,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string hello_blank_fragment
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
@@ -1117,9 +1187,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
@@ -1269,6 +1344,7 @@ styleable Spinner android_entries android_popupBackground android_prompt android
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
+styleable TagCloudView autoScrollMode darkColor lightColor radiusPercent scrollSpeed
 styleable TextAppearance android_textSize android_typeface android_textStyle android_textColor android_textColorHint android_textColorLink android_shadowColor android_shadowDx android_shadowDy android_shadowRadius android_fontFamily fontFamily textAllCaps
 styleable Toolbar android_gravity android_minHeight buttonGravity collapseContentDescription collapseIcon contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation logo logoDescription maxButtonHeight navigationContentDescription navigationIcon popupTheme subtitle subtitleTextAppearance subtitleTextColor title titleMargin titleMarginBottom titleMarginEnd titleMarginStart titleMarginTop titleMargins titleTextAppearance titleTextColor
 styleable View android_theme android_focusable paddingEnd paddingStart theme
