@@ -51,7 +51,7 @@ class DBPipeline(object):
             self.connect.commit()
         except Exception as error:
         # 出现错误时打印错误日志
-            log(error)
+            pass
         return item
 
     def close_spider(self, spider):

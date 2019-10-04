@@ -66,10 +66,11 @@ RANDOM_UA_TYPE='random'
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
+   # 'scrapy.pipelines.files.FilesPipeline':1,
    'kaoyan.pipelines.KaoyanPipeline': 1,
     'kaoyan.pipelines.DBPipeline':10,
 }
-
+FILES_STORE ='E:\kaoyan'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
