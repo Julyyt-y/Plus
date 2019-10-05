@@ -13,7 +13,7 @@ public class CloudActivity extends AppCompatActivity {
 
     private TagCloudView tagCloudView;
     private TextTagsAdapter textTagsAdapter;
-    private ViewTagsAdapter viewTagsAdapter;
+//    private ViewTagsAdapter viewTagsAdapter;
     private VectorTagsAdapter vectorTagsAdapter;
 
     @Override
@@ -22,8 +22,8 @@ public class CloudActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tagCloudView = findViewById(R.id.tag_cloud);
 
-        textTagsAdapter = new TextTagsAdapter(new String[20]);
-        viewTagsAdapter = new ViewTagsAdapter();
+        textTagsAdapter = new TextTagsAdapter(this, new String[20]);
+//        viewTagsAdapter = new ViewTagsAdapter();
         vectorTagsAdapter = new VectorTagsAdapter();
 
         tagCloudView.setAdapter(textTagsAdapter);

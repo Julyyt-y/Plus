@@ -14,6 +14,8 @@ import com.moxun.tagcloudlib.view.TagsAdapter;
 
 public class VectorTagsAdapter extends TagsAdapter {
 
+    int count;  //学校的数量
+
     //返回tag数量
     @Override
     public int getCount() {
@@ -46,11 +48,11 @@ public class VectorTagsAdapter extends TagsAdapter {
         //取上层非交集部分与下层交集部分,这里的上层和上层是指调用canvas的先后顺序，
         //先调用canvas绘制的就是下层图像，后调用的就是上层图像，
         // canvas是一层一层绘制的，后绘制的会覆盖在先绘制的上层
-        PorterDuffColorFilter porterDuffColorFilter = new PorterDuffColorFilter(themeColor,
-                PorterDuff.Mode.SRC_ATOP);
-        if (imageView == null) {
-            return;
-        }
-        imageView.getDrawable().setColorFilter(porterDuffColorFilter);
+//        PorterDuffColorFilter porterDuffColorFilter = new PorterDuffColorFilter(themeColor,
+//                PorterDuff.Mode.SRC_ATOP);
+//        if (imageView == null) {
+//            return;
+//        }
+//        imageView.getDrawable().setColorFilter(porterDuffColorFilter);
     }
 }

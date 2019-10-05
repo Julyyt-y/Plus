@@ -10,5 +10,7 @@
     <color name="tagDark">#206fa1</color>
     <color name="tagLight">#b1c914</color>
     <color name="textcolor_tags">#f99696</color>
-    <color name="tag_background">#2b2929</color>
+    <color name="tag_background">#efebeb</color>
+    <color name="line">#000000</color>
+    <color name="schoolColor">#ffffff</color>
 </resources>

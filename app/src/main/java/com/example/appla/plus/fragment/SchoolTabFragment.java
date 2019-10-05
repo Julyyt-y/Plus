@@ -13,7 +13,7 @@ import android.widget.Button;
 import com.example.appla.plus.R;
 import com.example.appla.plus.tagcloud.TextTagsAdapter;
 import com.example.appla.plus.tagcloud.VectorTagsAdapter;
-import com.example.appla.plus.tagcloud.ViewTagsAdapter;
+//import com.example.appla.plus.tagcloud.ViewTagsAdapter;
 import com.moxun.tagcloudlib.view.TagCloudView;
 
 /**
@@ -22,12 +22,11 @@ import com.moxun.tagcloudlib.view.TagCloudView;
 
 public class SchoolTabFragment extends Fragment {
 
-
     private View root;
 
     private TagCloudView tagCloudView;
     private TextTagsAdapter textTagsAdapter;
-    private ViewTagsAdapter viewTagsAdapter;
+//    private ViewTagsAdapter viewTagsAdapter;
     private VectorTagsAdapter vectorTagsAdapter;
 
 
@@ -43,8 +42,8 @@ public class SchoolTabFragment extends Fragment {
         tagCloudView = root.findViewById(R.id.fragment_tagcloud);
 
 
-        textTagsAdapter = new TextTagsAdapter(new String[20]);
-        viewTagsAdapter = new ViewTagsAdapter();
+        textTagsAdapter = new TextTagsAdapter(root.getContext(), new String[20]);
+//        viewTagsAdapter = new ViewTagsAdapter();
         vectorTagsAdapter = new VectorTagsAdapter();
         tagCloudView.setAdapter(textTagsAdapter);
 
