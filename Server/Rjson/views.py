@@ -1,7 +1,7 @@
 from django import forms
 from django.http import HttpResponse
 import json
-from .models import User,Other,Introduced
+from .models import User,Other,Introduced,News
 from django.shortcuts import render,redirect
 from django.contrib import auth
 class UserFrom(forms.Form):
@@ -44,31 +44,57 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return render(request, 'index.html')
+
 #资讯
 def news(request):
     id = request.GET.get('id')
-    print(id)
-    school=Introduced.objects.get(id=id)
-    print(school.jianjie)
-    data={"id":school.name,
-            "word":school.link,
-             "title":school.jianjie
+    judge=request.GET.get('judje')
+    if judge is True:
+        new=News.objects.get(id=id)
+        data={
+            "id":new.id,
+            "title":new.title,
+            "news":new.news,
+             "tiem":new.time
              }
+    else:
+        news=News.objects.all()[id:id+10]
+        data = {"news": [{
+                "id":new.id,
+                "title":new.title,
+                "time":new.time
+            }for new in news]}
     return HttpResponse(json.dumps(data))
+
 #院校信息
 def information(request):
     id=request.GET.get('id')
     word=request.GET.get('word')
     count=int(request.GET.get('count'))
-    title=Other.objects.filter(name=str(id)).filter(word=word)[count:count+5]
-    print(title)
-    data={}
-    for t in title:
-        data['title'+str(count)]=t.title
-        print(t.title)
-        count=count+1
+    judge = request.GET.get('judje')
+    if judge is True and count is None:
+        school=Other.objects.get(id=id)
+        data={
+            "id":school.id,
+            "word":school.word,
+            "title":school.title,
+            "content":school.content,
+            "time":school.time
+        }
+    elif  count is not None:
+        try:
+            words=Other.objects.filter(name=str(id)).filter(word=word)[count:count+10]
+        except Exception as e:
+            words = Other.objects.filter(name=str(id)).filter(word=word)
+        data = {"words": [{
+                "id": word.id,
+                "title": word.title,
+             "time": word.time
+             } for word in words]}
+
+    else:
+        data={"fail":"请求失败"}
     return HttpResponse(json.dumps(data))
-#具体信息
 
 def search(request):
     pass
