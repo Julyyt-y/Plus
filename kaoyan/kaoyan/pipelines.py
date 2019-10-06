@@ -31,7 +31,7 @@ class DBPipeline(object):
             # 插入数据
             if type(item) == KaoyanItem:
                 self.cursor.execute(
-                    """insert into links(name,link,jianjie)
+                    """insert into introduced(name,link,jianjie)
                     value (%s, %s,%s)""",
                     (item['name'],
                      item['link'],
@@ -39,9 +39,9 @@ class DBPipeline(object):
                      ))
             elif type(item) == otherItem:
                 self.cursor.execute(
-                    """insert into other(id,word,title,content,time)
+                    """insert into other(name,word,title,content,time)
                     value (%s,%s,%s,%s,%s)""",
-                    (item['id'],
+                    (item['name'],
                      item['word'],
                      item['title'],
                      item['content'],

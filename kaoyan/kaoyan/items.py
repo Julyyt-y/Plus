@@ -17,7 +17,7 @@ class KaoyanItem(scrapy.Item):
 
 #其他信息
 class otherItem(scrapy.Item):
-    id=scrapy.Field()
+    name=scrapy.Field()
     word=scrapy.Field()
     title=scrapy.Field()
     content=scrapy.Field()

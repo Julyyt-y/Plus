@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86dae0dc-64bc-4698-8900-897b6ced5b05" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Rjson/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Rjson/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Rjson/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Rjson/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Rjson/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Rjson/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Rjson/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/spiders/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/spiders/home.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,6 +22,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/kaoyan$home.coverage" NAME="home Coverage Results" MODIFIED="1569982663896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kaoyan/spiders" />
+    <SUITE FILE_PATH="coverage/kaoyan$test.coverage" NAME="test Coverage Results" MODIFIED="1570285052379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="kaoyan" />
@@ -21,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kaoyan/spiders/home.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="-545">
+              <caret line="72" column="58" lean-forward="true" selection-start-line="72" selection-start-column="58" selection-end-line="72" selection-end-column="58" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -33,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kaoyan/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
+            <state relative-caret-position="279">
               <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
             </state>
           </provider>
@@ -42,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kaoyan/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            <state relative-caret-position="279">
+              <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
               <folding>
                 <element signature="e#194#208#0" expanded="true" />
               </folding>
@@ -54,13 +65,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kaoyan/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="480">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -76,18 +94,18 @@
         <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/kaoyan/spiders/yzspider.py" />
         <option value="$PROJECT_DIR$/kaoyan/middlewares.py" />
-        <option value="$PROJECT_DIR$/kaoyan/items.py" />
         <option value="$PROJECT_DIR$/kaoyan/settings.py" />
+        <option value="$PROJECT_DIR$/kaoyan/items.py" />
         <option value="$PROJECT_DIR$/kaoyan/pipelines.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/kaoyan/spiders/home.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -107,12 +125,6 @@
               <item name="kaoyan" type="b2602c69:ProjectViewProjectNode" />
               <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
               <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kaoyan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -139,7 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.test">
     <configuration name="home" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="kaoyan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,8 +174,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="kaoyan" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.home" />
       </list>
     </recent_temporary>
@@ -184,17 +219,21 @@
       <workItem from="1570165987231" duration="22225000" />
       <workItem from="1570195649711" duration="2028000" />
       <workItem from="1570245544916" duration="235000" />
+      <workItem from="1570264382662" duration="7209000" />
+      <workItem from="1570332868359" duration="181000" />
+      <workItem from="1570354397805" duration="598000" />
+      <workItem from="1570362852779" duration="855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84333000" />
+    <option name="totallyTimeSpent" value="93176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49871466" visible="true" weight="0.16641453" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49871466" visible="true" weight="0.17473525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5012854" side_tool="true" weight="0.16187595" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -262,37 +301,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaoyan/spiders/home.py">
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaoyan/settings.py">
+    <entry file="file://$PROJECT_DIR$/kaoyan/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+        <state relative-caret-position="480">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kaoyan/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        <state relative-caret-position="279">
+          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
           <folding>
             <element signature="e#194#208#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaoyan/items.py">
+    <entry file="file://$PROJECT_DIR$/kaoyan/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="279">
+          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/spiders/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-545">
+          <caret line="72" column="58" lean-forward="true" selection-start-line="72" selection-start-column="58" selection-end-line="72" selection-end-column="58" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from django.conf.urls import url
+from Rjson import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^news/$',views.news,name='news'),
+    url(r'^regist/$',views.regist),
+    url(r'^login/$',views.login),
+    url(r'^logout/$',views.logout),
+    url(r'^info/$',views.information),
 ]
