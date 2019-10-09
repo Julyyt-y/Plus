@@ -1,5 +1,6 @@
 package com.example.appla.plus.tagcloud;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,9 +10,15 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.appla.plus.CloudContextActivity;
+import com.example.appla.plus.db.Information;
+import com.example.appla.plus.db.School;
+import com.example.appla.plus.db.Speciality;
 import com.moxun.tagcloudlib.view.TagsAdapter;
 
 import java.util.ArrayList;
@@ -48,10 +55,6 @@ public class TextTagsAdapter extends TagsAdapter {
             @Override
             public void onClick(View v) {
                 context.startActivity(new Intent(context, CloudContextActivity.class));
-
-//                changeToAnotherFragment();
-//                Log.e("Click", "Tag " + position + " clicked.");
-//                Toast.makeText(context, "Tag " + position + " clicked", Toast.LENGTH_SHORT).show();
             }
         });
         tv.setTextColor(Color.BLACK);
