@@ -3,12 +3,17 @@
     package="com.example.appla.plus">
 
     <application
+        android:name="org.litepal.LitePalApplication"
+        xmlns:tools="http://schemas.android.com/tools"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:appComponentFactory=""
+        tools:replace="android:appComponentFactory">
+
         <activity android:name=".BottomActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

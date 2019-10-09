@@ -7,4 +7,6 @@
     <color name="themeColor">#2196f3</color>
     <color name="themeTextColor">#ffffff</color>
     <color name="lineColor">#cccccc</color>
+    <color name="white">#ede4e8</color>
+    <color name="title_text">#26B8EE</color>
 </resources>

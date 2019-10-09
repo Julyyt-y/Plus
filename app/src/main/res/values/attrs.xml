@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PersonaltemView">
+        <attr name="icon" format="reference"/>//设置左侧图标
+        <attr name="name" format="string"/>//左侧标题文字
+        <attr name="data" format="string"/>//右侧描述文字
+        <attr name="show_more" format="boolean"/>//是否显示右侧小箭头
+        <attr name="show_line" format="boolean"/>//是否显示下划线
+    </declare-styleable>
+
+    <declare-styleable  name="inputview">
+        <!--图片-->
+        <attr name="input_icon" format="reference"></attr>
+        <!--字体-->
+        <attr name="input_hint" format="string"></attr>
+        <!--是否密文-->
+        <attr name="is_pass" format="boolean"></attr>
+    </declare-styleable>
+
+
+    <declare-styleable  name="nav">
+        <!--图片-->
+        <attr name="icon" />
+        <!--字体-->
+        <attr name="hint" format="string"></attr>
+        <!--是否密文-->
+        <attr name="pass" format="boolean"></attr>
+        <attr name="right_icon" format="reference"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalSize" format="dimension" />
+        <attr name="finalX" format="dimension" />
+        <attr name="toolBarHeight" format="dimension" />
+        <attr name="finalYPosition" format="dimension" />
+        <attr name="startXPosition" format="dimension" />
+        <attr name="startToolbarPosition" format="dimension" />
+        <attr name="startHeight" format="dimension" />
+        <attr name="finalHeight" format="dimension" />
+    </declare-styleable>
+
+
+    <!--自定义标题栏的attr文件-->
+    <declare-styleable name="CustomTitleBar">
+        <attr name="title" format="string"/>
+        <attr name="left_icon" format="reference"/>
+        <attr name="right_icon" />
+        <attr name="right_text" format="string"/>
+        <attr name="titlebar_type" format="integer"/>
+    </declare-styleable>
+
+</resources>
