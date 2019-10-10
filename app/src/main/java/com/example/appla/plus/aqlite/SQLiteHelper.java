@@ -27,8 +27,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
                 + "userName VARCHAR, "  //用户名
                 + "nickName VARCHAR, "  //昵称
                 + "sex VARCHAR, "        //性别
-                + "golbal_school VARCHAR"  //目标院校
-                + "global_major VARCHAR"   //目标专业
+                + "golbal_school VARCHAR,"  //目标院校
+                + "global_major VARCHAR,"   //目标专业
                 + "signature VARCHAR,"  //签名
                 + "head VARCHAR "        //头像
                 + ")");
