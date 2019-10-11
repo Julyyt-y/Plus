@@ -1,0 +1,112 @@
+请求成功返回
+请求所有院校（116条）
+请求方式:GET
+http://127.0.0.1:8000/info/?school=all
+{
+    "data":{[
+            {"id":1,
+             "school":北京大学
+             }
+             ...
+             ...
+             ...
+             {id:116,
+             "school":清华大学
+             }
+             ]}
+    "status":"ok"
+}
+
+请求某个院校所有分类（十三条）
+请求方式:GET
+http://127.0.0.1:8000/info/?school=1&classification=all
+"data":{[
+            {"id":1,
+             "classification":Score_line//分数线（百度在线翻译）
+             }...
+             {id:13,
+             "classification":Report_ratio//报录比
+             }
+             ]}
+    "status":"ok"
+   }
+请求目标院校具体分类标题信息（一次20条）
+请求方式:GET
+http://127.0.0.1:8000/info/?school=1&classification=1
+{
+    "data":{[{
+            "id":1,
+            "school":1,//school的id
+            "classification":1,//classification的id
+            "title":北京大学某某专业2019报录比,
+            "time":8月9日
+            }
+            ...
+            ...
+            ...
+            {
+            "id":20,
+            "school":1,//school的id
+            "classification":1,//classification的id
+            "title":北京大学某某专业2019报录比,
+            "time":9月8日
+            }]}
+    "status":"ok"
+}
+请求目标院校具体分类标题具体新信息（一次1条）
+请求方式:GET
+http://127.0.0.1:8000/info/?id=1
+    {
+        "data":{"id":1,//对应标题的id号
+                "content":"具体信息"}
+         "status":"ok"
+    }
+请求资讯(一次返回二十条）
+请求方式:GET
+http://127.0.0.1:8000/news/?id=1
+{
+    data:{[{
+                "id":1,
+                "title":"考研资讯标题1",
+                "time":"9月28日"
+            }
+            ...
+            ...
+            ...
+            {
+                "id":20,
+                "title":"考研资讯标题20",
+                "time":"9月30日"
+            }]}
+    "status":"ok"
+}
+请求资讯的具体信息（一次一条）
+请求方式:GET
+http://127.0.0.1:8000/news/?id=1&news=True
+{
+    "data":{
+                "id": 1,
+                "content":"考研资讯1具体信息"
+            }
+}
+查找标题框
+请求方式:GET
+http://127.0.0.1:8000/search/?word=北京大学
+    待续
+注册
+请求方式:POST
+http://127.0.0.1:8000/regist/
+登陆
+请求方式:POST
+http://127.0.0.1:8000/login/
+退出
+请求方式:POST
+http://127.0.0.1:8000/logout/
+
+
+
+所有请求失败返回
+{
+    "data":{},
+    "status":"fail"
+}

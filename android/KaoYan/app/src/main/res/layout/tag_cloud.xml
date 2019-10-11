@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.moxun.tagcloudlib.view.TagCloudView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tag_cloud"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:autoScrollMode="uniform"
+    app:darkColor="@color/tagDark"
+    app:lightColor="@color/tagLight"
+    app:radiusPercent="0.7"
+    app:scrollSpeed="0.9"
+    android:background="@drawable/yuanxiaotupu">
+</com.moxun.tagcloudlib.view.TagCloudView>

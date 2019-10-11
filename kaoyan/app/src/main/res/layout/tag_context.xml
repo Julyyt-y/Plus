@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/beijing">
+
+    <TextView
+        android:id="@+id/cloud_text"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="中北大学"
+        android:textSize="20dp"
+        android:textColor="@color/schoolColor"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="100dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/xuexiaojianjie"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/ic_xuexiaojianjie" />
+
+    <Button
+        android:id="@+id/kaoshikemu"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/ic_kaoshikemu" />
+
+    <Button
+        android:id="@+id/baolubi"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginLeft="210dp"
+        android:background="@drawable/ic_baolubi" />
+
+    <Button
+        android:id="@+id/fulubi"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="240dp"
+        android:background="@drawable/ic_fulubi" />
+
+    <Button
+        android:id="@+id/tuimianbili"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="300dp"
+        android:background="@drawable/ic_tuimianbili" />
+
+    <Button
+        android:id="@+id/jiuyelv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/ic_jiuyelv" />
+
+    <Button
+        android:id="@+id/fenshuxian"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="270dp"
+        android:background="@drawable/ic_fenshuxian" />
+
+    <Button
+        android:id="@+id/kaoshidagang"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/ic_kaoshidagang" />
+
+    <Button
+        android:id="@+id/zhuanxueshuo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginLeft="110dp"
+        android:background="@drawable/ic_xuezhuanshuorenshu" />
+
+</RelativeLayout>

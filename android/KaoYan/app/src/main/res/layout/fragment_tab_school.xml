@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tag_background"
+    android:gravity="center">
+
+    <com.moxun.tagcloudlib.view.TagCloudView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_tagcloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:autoScrollMode="uniform"
+        app:darkColor="#FF0000"
+        app:lightColor="#00FF00"
+        app:radiusPercent="0.7"
+        app:scrollSpeed="0.5" />
+
+</LinearLayout>

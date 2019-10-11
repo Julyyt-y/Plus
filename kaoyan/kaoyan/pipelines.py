@@ -7,7 +7,7 @@
 import pymysql
 from kaoyan import settings
 from logging import log
-from kaoyan.items import KaoyanItem,otherItem
+from kaoyan.items import KaoyanItem,otherItem,newsItem
 class KaoyanPipeline(object):
     def process_item(self, item, spider):
         return item
@@ -25,33 +25,121 @@ class DBPipeline(object):
 
         # 通过cursor执行增删查改
         self.cursor = self.connect.cursor()
-
+        self.cursor.execute("""
+            drop table if exists school
+        """)
+        self.cursor.execute("""
+            drop table if exists classification
+        """)
+        self.cursor.execute("""
+            drop table if exists profile
+                """)
+        self.cursor.execute("""
+            drop table if exists info
+                """)
+        self.cursor.execute("""
+            drop table if exists profile_news
+        """)
+        self.cursor.execute("""
+            drop table if exists specific_news
+                """)
+        self.cursor.execute("""
+            create table school(
+            s_id smallint primary key auto_increment,
+            name char(20),
+            link char(50));
+        """)
+        self.cursor.execute("""
+            create table classification(
+            c_id smallint primary key auto_increment,
+            name char(20));
+        """)
+        self.cursor.execute("""
+            create table profile(
+            p_id int primary key auto_increment ,
+            school char not null,                  
+            classification char not null,           
+            title varchar(100) not null,
+            time char(20));
+        """) #s_id
+            #c_id
+        self.cursor.execute("""
+        create table info(
+        p_id int primary key auto_increment,
+        content text);
+        """)
+        self.cursor.execute("""
+            create table profile_news(
+            n_id smallint primary key auto_increment,
+            title varchar(150),
+            time varchar(50));
+        """)
+        self.cursor.execute("""
+        create table specific_news(
+        n_id smallint primary key auto_increment,
+        news text);
+        """)
     def process_item(self, item, spider):
         try:
             # 插入数据
             if type(item) == KaoyanItem:
+                name=item['name']
+                link=item['link']
                 self.cursor.execute(
-                    """insert into introduced(name,link,jianjie)
-                    value (%s, %s,%s)""",
+                    """insert into school(name,link)
+                    value (%s,%s)""",
                     (item['name'],
                      item['link'],
-                     item['jianjie']
+                     ))
+                self.cursor.execute(
+                    """insert into profile(school,classification,title,time)
+                    value (%s, %s,%s,%s)""",
+                    (item['name'],
+                     "jianjie",
+                     item['name']+"简介",
+                     "",
+                     ))
+                self.cursor.execute(
+                    """insert into info(content)
+                    value (%s)""",
+                    (
+                     item['content'],
                      ))
             elif type(item) == otherItem:
                 self.cursor.execute(
-                    """insert into other(name,word,title,content,time)
-                    value (%s,%s,%s,%s,%s)""",
+                    """insert into profile(school,classification,title,time)
+                    value (%s,%s,%s,%s)""",
                     (item['name'],
-                     item['word'],
+                     item['classification'],
                      item['title'],
-                     item['content'],
-                     item['time']
+                     item['time'],
                      ))
+                self.cursor.execute(
+                    """insert into info(content)
+                    value (%s)""",
+                    (
+                        item['content'],
+                    ))
+            elif type(item)==newsItem:
+                self.cursor.execute(
+                    """insert into profile_news(title,time)
+                    value (%s,%s)""",
+                    (
+                     item['title'],
+                     item['time'],
+                     ))
+                self.cursor.execute(
+                    """insert into specific_news(content)
+                    value (%s)""",
+                    (
+                        item['news'],
+                    ))
                 # 提交sql语句
             self.connect.commit()
         except Exception as error:
         # 出现错误时打印错误日志
-            pass
+            print("错误")
+
         return item
 
     def close_spider(self, spider):

@@ -20,8 +20,10 @@ from Rjson import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^news/$',views.news,name='news'),
-    url(r'^regist/$',views.regist),
+    url(r'^regist/$',views.register),
     url(r'^login/$',views.login),
     url(r'^logout/$',views.logout),
     url(r'^info/$',views.information),
+    url(r'^search/$',views.search),
+
 ]
