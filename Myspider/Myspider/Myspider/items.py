@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+
+# Define here the models for your scraped items
+#
+# See documentation in:
+# https://docs.scrapy.org/en/latest/topics/items.html
+
+import scrapy
+
+
+class KaoyanItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    name=scrapy.Field()
+    link=scrapy.Field()
+    jianjie=scrapy.Field()
+
+#其他信息
+class otherItem(scrapy.Item):
+    name=scrapy.Field()
+    word=scrapy.Field()
+    title=scrapy.Field()
+    content=scrapy.Field()
+    time=scrapy.Field()
+#资讯
+class newsItem(scrapy.Item):
+    title=scrapy.Field()
+    news=scrapy.Field()
+    time=scrapy.Field()
